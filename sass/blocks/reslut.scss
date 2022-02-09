@@ -1,8 +1,11 @@
 .asadbek{
     max-width: 1440px;
-    height: 1000px;
     margin: 0 auto;
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     &__box{
         width: 600px;
@@ -10,5 +13,6 @@
         background-color: #fff;
         border: 2px solid gray;
         border-radius: 10%;
+        margin-top: 100px;
     }
 }

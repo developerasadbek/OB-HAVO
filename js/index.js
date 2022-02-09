@@ -26,9 +26,9 @@ async function Hello(evt){
         geo()
     }, 1000))
 
-    // .then(setTimeout(() => {
-    //     window.location.pathname = "/result.html";
-    // }, 1050))
+    .then(setTimeout(() => {
+        window.location.pathname = "/result.html";
+    }, 1600))
 };
 
 function geo() {
@@ -38,9 +38,9 @@ function geo() {
     .then(response => response.json())
     .then(json => {
         json.weather.forEach(element => {
-            alert("Osmon : " + element.main + "\n" +
-            "Description : " + element.description + "\n"+
-            "Country ID  : " + element.id);
+            window.localStorage.setItem("Malumot", element.main)
+            window.localStorage.setItem("Description", element.description)
+            console.log(element);
         });
     })
 }
@@ -54,3 +54,29 @@ function viloyatIshla(evt) {
 
 
 elViloyat.addEventListener("click",viloyatIshla)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// alert("Osmon : " + element.main + "\n" +
+// "Description : " + element.description + "\n"+
+// "Country ID  : " + element.id);
