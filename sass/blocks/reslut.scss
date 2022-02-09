@@ -1,0 +1,14 @@
+.asadbek{
+    max-width: 1440px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+
+    &__box{
+        width: 600px;
+        height: 400px;
+        background-color: #fff;
+        border: 2px solid gray;
+        border-radius: 10%;
+    }
+}

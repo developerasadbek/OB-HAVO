@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,AAAA,CACJ,SAAS,CAAE,MAAM,CACjB,MAAM,CAAE,MAAM,CACd,MAAM,CAAE,MAAM,CACd,OAAO,CAAE,SAAS,CASrB,AAPI,AAAD,aAAM,AAAA,CACF,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,gBAAgB,CAAE,IAAI,CACtB,MAAM,CAAE,cAAc,CACtB,aAAa,CAAE,GAAG,CACrB",
+    "sources": [
+        "../sass/blocks/reslut.scss"
+    ],
+    "names": [],
+    "file": "reslut.css"
+}
