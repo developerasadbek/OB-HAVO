@@ -9,4 +9,4 @@ let textcha2 = findElement(".text-2")
 
 
 textcha.textContent = "Osmon : " + window.localStorage.getItem("Malumot",);
-textcha2.textContent ="Havo : " +  window.localStorage.getItem("Description",)
+textcha2.textContent ="Havo : " +  window.localStorage.getItem("Description",);

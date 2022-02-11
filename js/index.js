@@ -10,7 +10,7 @@ async function Hello(evt){
     evt.preventDefault();
     var searchText = elInput.value;
 
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&appid=9ac1d32f3010f912c50634b2cd77c712`, { method: 'get' })
+    let x = fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&appid=9ac1d32f3010f912c50634b2cd77c712`, { method: 'get' })
     .then(response => response.json())
     .then(json =>{
         json.forEach(element => {
@@ -18,10 +18,7 @@ async function Hello(evt){
            elLonText.value = element.lon;
         });  
     })
-    .catch(() => {
-        alert("Iltimos shaxarning tog`ri nomini kiriting 😩")
-    })
-
+    
     .then(setTimeout(() => {
         geo()
     }, 1000))
@@ -29,6 +26,16 @@ async function Hello(evt){
     .then(setTimeout(() => {
         window.location.pathname = "/result.html";
     }, 1600))
+
+    // .then(function clear() {
+    //     if () {
+            
+    //     }
+    // })
+
+    .catch(() => {
+        alert("Iltimos shaxarning tog`ri nomini kiriting 😩")
+    })
 };
 
 function geo() {
@@ -51,7 +58,6 @@ function viloyatIshla(evt) {
     evt.preventDefault();
     elInput.value = evt.target.textContent;
 }
-
 
 elViloyat.addEventListener("click",viloyatIshla)
 
