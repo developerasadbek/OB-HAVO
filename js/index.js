@@ -6,7 +6,7 @@ let elLonText = findElement(".lon");
 let elViloyat = findElement(".unList");
 
 
-async function Hello(evt){
+async function gettingGeo(evt){
     evt.preventDefault();
     var searchText = elInput.value;
 
@@ -20,69 +20,33 @@ async function Hello(evt){
     })
     
     .then(setTimeout(() => {
-        geo()
-    }, 1000))
+        weahterResult()
+    }, 800))
 
     .then(setTimeout(() => {
         window.location.pathname = "/result.html";
-    }, 1600))
-
-    // .then(function clear() {
-    //     if () {
-            
-    //     }
-    // })
+    }, 1000))
 
     .catch(() => {
         alert("Iltimos shaxarning tog`ri nomini kiriting 😩")
     })
 };
 
-function geo() {
-    // evt.preventDefault()
-
+function weahterResult() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${elLatText.value}&lon=${elLonText.value}&appid=9ac1d32f3010f912c50634b2cd77c712`)
     .then(response => response.json())
     .then(json => {
         json.weather.forEach(element => {
             window.localStorage.setItem("Malumot", element.main)
-            window.localStorage.setItem("Description", element.description)
-            console.log(element);
         });
     })
 }
-elForm.addEventListener("submit", Hello,);
+elForm.addEventListener("submit", gettingGeo,);
 
 
-function viloyatIshla(evt) {
+function renderingNextPage(evt) {
     evt.preventDefault();
     elInput.value = evt.target.textContent;
 }
 
-elViloyat.addEventListener("click",viloyatIshla)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// alert("Osmon : " + element.main + "\n" +
-// "Description : " + element.description + "\n"+
-// "Country ID  : " + element.id);
+elViloyat.addEventListener("click",renderingNextPage)
